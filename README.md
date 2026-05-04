@@ -1,3 +1,3 @@
-j# python-practice
+# python-practice
 My Python learning journey
-journey
+
