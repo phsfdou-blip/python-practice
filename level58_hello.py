@@ -1,4 +1,3 @@
-name = input("Enter your name: ")
-
-print(f"Hello {name}!")
-print("Great job Phillip! 🚀")
+ Phillip
+Hello Phillip!
+Great job Phillip!
