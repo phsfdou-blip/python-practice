@@ -1,0 +1,27 @@
+print("🤖 Level 120 AI Job Search Helper")
+
+name = input("Enter your name: ")
+city = input("What city do you want to search jobs in? ")
+job_goal = input("What job goal do you have? ")
+skill = input("What skill are you learning now? ")
+
+print()
+print("AI Job Search Plan for", name)
+print("City:", city)
+print("Job goal:", job_goal)
+print("Current skill:", skill)
+
+print()
+print("Good job search keywords:")
+print("AI Support Assistant")
+print("Python Support Helper")
+print("Excel Automation Assistant")
+print("Operations Support Analyst")
+print("Data Entry Automation Assistant")
+
+print()
+print("AI Prompt:")
+print("I am learning", skill)
+print("My job goal is", job_goal)
+print("I want to search jobs in", city)
+print("Please give me beginner-friendly job titles, skills to practice, and a simple job search plan.")
