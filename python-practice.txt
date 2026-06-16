@@ -1,0 +1,4 @@
+C:\Users\phsfd\OneDrive\Documents\python-practice
+
+cd C:\Users\phsfd\OneDrive\Documents
+dir level70_surface_practice.py
