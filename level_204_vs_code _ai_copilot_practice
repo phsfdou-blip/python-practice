@@ -1,0 +1,22 @@
+print("🤖 Level 204 VS Code + AI Copilot Practice")
+
+practice_minutes = [20, 30, 40, 30, 50]
+
+average_minutes = sum(practice_minutes) / len(practice_minutes)
+
+above_count = 0
+below_count = 0
+equal_count = 0
+
+for minutes in practice_minutes:
+    if minutes > average_minutes:
+        above_count += 1
+    elif minutes < average_minutes:
+        below_count += 1
+    else:
+        equal_count += 1
+
+print(f"Average: {average_minutes}")
+print(f"Above average: {above_count}")
+print(f"Below average: {below_count}")
+print(f"Equal to average: {equal_count}")
