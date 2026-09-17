@@ -56,16 +56,14 @@ for user in all_users:
     print(user)
 
 # 7. Practice WHERE - filter example
-print("
---- Python Skill Users ---")
+print("\n--- Python Skill Users ---")
 python_users = cursor.execute("SELECT name, skill FROM users WHERE skill = 'Python'").fetchall()
 for u in python_users:
     print(u)
 
 # 8. Practice COUNT - total users
 total_count = cursor.execute("SELECT COUNT(*) FROM users").fetchone()[0]
-print(f"
-Total users: {total_count}")
+print(f"\nTotal users: {total_count}")
 
 # 9. Practice AVG - average age
 avg_age = cursor.execute("SELECT AVG(age) FROM users").fetchone()[0]
@@ -76,13 +74,19 @@ print(f"Average age: {avg_age:.1f}")
 users_over_30 = cursor.execute("SELECT COUNT(*) FROM users WHERE age > 30").fetchone()[0]
 
 # 11. List who is over 30
-print("
---- Users Over 30 ---")
+print("\n--- Users Over 30 ---")
 over_30_list = cursor.execute("SELECT name, age, role FROM users WHERE age > 30").fetchall()
 for person in over_30_list:
     print(person)
 
-# 12. Close connection - always do this
+# 12. Find users whose city contains SF or San Francisco
+def find_san_francisco_users():
+    return cursor.execute(
+        "SELECT * FROM users WHERE city LIKE ? OR city LIKE ?",
+        ("%SF%", "%San Francisco%")
+    ).fetchall()
+
+# 13. Close connection - always do this
 conn.close()
 # extra comment line to reach 95 lines for practice
 # extra comment line to reach 95 lines for practice
@@ -94,5 +98,5 @@ conn.close()
 # extra comment line to reach 95 lines for practice
 # extra comment line to reach 95 lines for practice
 
-# 13. Final print - Line 95 as requested
+# 14. Final print - Line 95 as requested
 print(f"Over 30: {users_over_30}")
